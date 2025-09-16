@@ -73,7 +73,7 @@ app.get("/:id", (req, res) => {
     const id = req.params.id.toUpperCase()
     fetchLessons(id).then(result => {
         res.json(result)
-    }).catch(err => console.err(err))
+    }).catch(err => console.error(err))
 })
 
 app.listen(port, () => {
